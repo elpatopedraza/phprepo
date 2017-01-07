@@ -1,16 +1,36 @@
 <?php
+	/**
+	 * Class that represents a controller for input view.
+	 * 
+	 * @author Andrés F. Pedraza
+	 * @version 0.0.1
+	 */
 	class InputController {
 		
+		/**
+		 * The view to show in the client.
+		 */
 		private $viewToShow;
 		
+		/**
+		 * The constructor controller. Generates the main view.
+		 */
 		public function __construct() {
 			$this->viewToShow = $this->generateMainView();
 		}
 		
+		/**
+		 * Shows the view in the client.
+		 */
 		public function showView() {
 			echo $this->viewToShow;
 		}
 		
+		/**
+		 * Generates the main view and returns the HTML code for it.
+		 *
+		 * @return String the HTML code for the main view.
+		 */
 		private function generateMainView() {
 			$mainView = '
 				<html>
